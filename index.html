@@ -2,35 +2,71 @@
 
 <head>
     <link rel="stylesheet" href="src/assets/styles/style.css" />
+    <title>Home</title>
 </head>
 
 <body>
     <header>
+        <section id="main-information">
+            <img src="src/assets/img/Logo.png" alt="Мой логотип" width="200" height="200">
 
-        <img src="src/assets/img/Logo.png" alt="Мой логотип" width="200" height="200">
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </section>
+
 
         <nav class="breadcrumbs">
             <a href="index.html">Главная</a>
-            <a href="contacts.html">Контакты</a>
         </nav>
     </header>
-    <h1>Что такое случайность?</h1>
-    <p>интересные факты про кубики</p>
-    <h3>БРОСАТЬ КОСТИ</h3>
-    <h4>Что это означает?</h4>
-    <p>Это очень страшно, не советую узнавать что это значит</p>
-    <h3>ФИШКИ</h3>
-    <p>Фишка, единственный элемент доски</p>
+    <main>
+        <section id="introduction">
+            <h1>Что такое случайность?</h1>
+            <p>интересные факты про кубики</p>
+        </section>
+
+        <hr />
+
+        <section id="dice">
+            <h3>БРОСАТЬ КОСТИ</h3>
+            <article id="dice-mean">
+                <h4>Что это означает?</h4>
+                <p>Это очень страшно, не советую узнавать что это значит</p>
+            </article>
+        </section>
+
+        <hr />
+
+        <section id="chip">
+            <h3>ФИШКИ</h3>
+            <p>Фишка, единственный элемент доски</p>
+        </section>
+    </main>
     <hr />
     <footer>
-        <h3>Спонсоры</h3>
-        <p>Я и мои хтонические кошмары</p>
+        <section id="footer-information">
+            <h3>Спонсоры</h3>
+            <p>Я и мои хтонические кошмары</p>
+        </section>
+
         <hr />
-        <ul>
-            <li>Тут не будет nav </li>
-            <li>+79829416649 </li>
-            <li>stud0000310795@utmn.ru </li>
-        </ul>
-        <p>Все права защищены</p>
+
+        <address id="contarct-information">
+            <ul>
+                <li> Александр </li>
+                <li>+79829416649 </li>
+                <li>stud0000310795@utmn.ru </li>
+            </ul>
+        </address>
+        <p id="copyright">Все права защищены</p>
     </footer>
 </body>
