@@ -76,7 +76,7 @@ form {
         inset -2px 0 0px 0px #FFFFFF;
     }
 
-#main-information {
+.main-information {
     display: flex;
 }
 

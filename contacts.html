@@ -7,7 +7,7 @@
 
 <body>
     <header>
-        <section id="main-information">
+        <section class="main-information">
             <img src="src/assets/img/Logo.png" alt="Мой логотип" width="200" height="200">
 
             <nav class="navigation">
@@ -31,7 +31,7 @@
     </header>
 
     <main>
-        <section id="introduction">
+        <section class="introduction">
             <h2>Contact Us</h2>
             <figure id="selfie">
                 <figcaption>Селфи</figcaption>
@@ -41,24 +41,30 @@
 
         <hr />
 
-        <section id="concrete-address">
+        <section class="concrete-address">
             <h4>Address</h4>
             <p>дом 51</p>
+            <aside>
+                <img src="src/assets/img/Map.png" width=200 />
+            </aside>
         </section>
 
         <hr />
 
-        <section id="phone">
+        <section class="phone">
             <h4>Phone</h4>
             <ul>
                 <li>+79829416649 </li>
                 <li>+79829673478 </li>
             </ul>
+            <aside>
+                <img src="src/assets/img/Phone.png" width=200 />
+            </aside>
         </section>
 
         <hr />
 
-        <section id="services">
+        <section class="services">
             <h4>Online service</h4>
             <ul>
                 <li><a href="https://github.com/HEYDA4HNK">GitHub</a></li>
@@ -66,37 +72,45 @@
             </ul>
         </section>
 
+
         <hr />
 
-        <address id="all-information">
+        <address class="all-information">
             Улица Произвольная д.67 +79829416649
         </address>
 
         <hr />
 
-        <section id="send-message">
-            <h4>Send us message</h4>
-            <form>
-                <label for="input">Full Name</label>
-                <input class="form_fields" id="input" type="text" />
-                <label for="email">Email</label>
-                <input class="form_fields" id="email" type="email" />
-                <label for="textArea">Message</label>
-                <textarea class="form_fields" id="textArea" rows="5" cols="22"></textarea>
-                <button class="submit_button">submit</button>
-            </form>
-        </section>
+        <div class="contact-message-info">
+            <section class="send-message">
+                <h4>Send us message</h4>
+                <form>
+                    <label for="input">Full Name</label>
+                    <input class="form_fields" id="input" type="text" />
+                    <label for="email">Email</label>
+                    <input class="form_fields" id="email" type="email" />
+                    <label for="textArea">Message</label>
+                    <textarea class="form_fields" id="textArea" rows="5" cols="22"></textarea>
+                    <button class="submit_button">submit</button>
+                </form>
+            </section>
+            <aside>
+                <h4>Хотите связаться с нами?</h4>
+                <p>Мы самые отпетые мошенники, мы отвечаем каждому, отвечаем</p>
+            </aside>
+        </div>
+        
     </main>
-    <hr />
+
     <footer>
-        <section id="footer-information">
+        <section class="footer-information">
             <h3>Спонсоры</h3>
             <p>Я и мои хтонические кошмары</p>
         </section>
 
         <hr />
 
-        <address id="contarct-information">
+        <address class="contarct-information">
             <ul>
                 <li> Александр </li>
                 <li>+79829416649 </li>
