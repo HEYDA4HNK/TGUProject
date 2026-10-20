@@ -2,92 +2,70 @@
 @import "./fonts.css";
 @import "./utils.css";
 
-p {
-    font-size: 16px;
-    line-height: 26px;
-    color: #1F3F68;
-}
-h1 {
-    font-size: 64px;
-    color: #1F3F68;
+.main-data {
+    background: #ffffff;
 }
 
-h2 {
-    font-weight: 500;
-    font-size: 44px;
-    text-align: center;
-}
-
-h3 {
-    font-size: 36px;
-    text-align: center;
-}
-
-h4 {
-    font-size: 20px;
-    line-height: 30px;
-    color: #1F3F68;
-}
-
-.form_fields {
+img {
     display: block;
-    border: 1px solid #356EAD;
-    box-sizing: border-box;
-    border-radius: 10px;
-    opacity: 0.4;
 }
 
-.form-about-field {
-    color: #000000;
+/*Начало хедера*/
+.main-header {
+    position: fixed;
+    top: 10px;
+    right: 100px;
+    left: 100px;
+    z-index: 1000;
+    background: #ffffff;
+    border-radius: 15px 15px;
+    margin: 0px 10px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+    box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.1);
 }
 
-.submit_button {
-    background: linear-gradient(to right, royalblue, slateblue);
-    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-    border-radius: 20px;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 26px;
-    text-align: center;
-    color: #FFFFFF;
-    padding: 20px 40px 20px 40px;
-    text-transform: uppercase;
-}
-
-form {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5)), url("../img/Background.jpg");
-    border-radius: 20px 20px 20px 20px;
-    padding: 15px 15px 15px 15px;
-    width: min-content;
-    color: aliceblue;
-}
-
-.breadcrumbs {
-    background: linear-gradient(#FFFFFF, #00a07e);
-    
-    padding: 10px 0 10px 0;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-}
-    .breadcrumbs a {
-        background: linear-gradient(#FFFFFF, #00a07e);
-        color: #000000;
+.main-header__nav ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        align-self: center;
+        gap: 20px;
+    }
+    .main-header__nav a {
         text-decoration: none;
-        border-radius: 0px 20px 20px 0px;
-        padding: 10px 20px 10px 10px;
-        box-shadow: 2px 0px 2px 0px,
-        inset -2px 0 0px 0px #FFFFFF;
+        color: #000000;
+        font-weight: 500;
     }
 
-.main-information {
+.main-header__contacts {
     display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
 }
 
-.test {
-    color: yellow !important;
+.main-header__contact {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
-.test {
-    color: red !important;
+    .main-header__contact a {
+        text-decoration: none;
+        color: #0094ff;
+    }
+/*Конец хедера*/
+.h1-blue {
+    color: #0094ff;
+}
+/*Начало главной страницы*/
+
+.leave-contact {
+
 }
