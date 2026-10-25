@@ -6,11 +6,12 @@
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="main-header" >
+        <button class="menu-button" data-show-medium></button>
         <div class="main-header__logo">
             <img src="src/assets/img/Logo.png" alt="логотип" width="150" height="40"/>
         </div>
-        <nav class="main-header__nav">
+        <nav class="main-header__nav" data-hidden-medium>
             <ul>
                 <li><a href="">Services</a></li>
                 <li><a href="">Media</a></li>
@@ -20,7 +21,7 @@
             </ul>
         </nav>
         <div class="main-header__contacts">
-            <div class="main-header__contact">
+            <div class="main-header__contact" data-hidden-medium>
                 <div class="main-header__contact-img">
                     <img src="src/assets/img/Phone.png" alt="" width="20" height="20" />
                 </div>
@@ -28,7 +29,7 @@
                 <div class="main-header__contact-property"><a href="tel:+71111111111">+7 (111) 111 11 11</a></div>
                 <div class="main-header__contact-property"><a href="tel:+71111111111">+7 (111) 111 11 11</a></div>
             </div>
-            <div class="main-header__contact">
+            <div class="main-header__contact" data-hidden-thin>
                 <div class="main-header__contact-img">
                     <img src="src/assets/img/Mail.png" alt="" width="20" height="20" />
                     </div>
@@ -48,7 +49,7 @@
                         <p>We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices</p>
                     </section>
                     <section class="leave-contact__form">
-                        <h2 class="about-form">Leave your contacts and wi will call you back within 30 minutes</h2>
+                        <h2 class="about-form">Leave your contacts and we will call you back within 30 minutes</h2>
                         <form>
                             <div class="label-block">
                                 <label for="leave-contact__phone-number">Phone number</label>
@@ -59,7 +60,7 @@
                                 <input id="leave-contact__full-name" type="text" />
                             </div>
 
-                            <button type="submit">Get<br>consultation</button>
+                            <button type="submit">Get consultation</button>
                         </form>
                     </section>
                 </div>
@@ -67,11 +68,11 @@
             <hr />
             <div class="vacancy">
                 <div class="vacancy__main-block">
+                    <section class="vacancy__about">
+                        <h1>Full development cycle</h1>
+                        <p>We use proven technologies</p>
+                    </section>
                     <div class="vacancy__info">
-                        <section class="vacancy__about">
-                            <h1>Full development cycle</h1>
-                            <p>We use proven technologies</p>
-                        </section>
                         <div class="vacancy__stacks">
                             <section class="vacancy__stack">
                                 <h2>Web</h2>
@@ -108,52 +109,52 @@
                                 </ul>
                             </section>
                         </div>
-                        
+
                     </div>
 
                     <div class="vacancy__list">
                         <ul>
                             <li>
-                                <button type="button" class="vacancy__button">
+                                <a href="" class="vacancy__button">
                                     iOS development
                                     <img src="src/assets/img/Next.png" alt="" />
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button type="button" class="vacancy__button">
+                                <a href="" class="vacancy__button">
                                     Android development
                                     <img src="src/assets/img/Next.png" alt="" />
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button type="button" class="vacancy__button">
+                                <a href="" class="vacancy__button">
                                     Web development
                                     <img src="src/assets/img/Next.png" alt="" />
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button type="button" class="vacancy__button">
+                                <a href="" class="vacancy__button">
                                     UI/UX design
                                     <img src="src/assets/img/Next.png" alt="" />
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button type="button" class="vacancy__button">
+                                <a href="" class="vacancy__button">
                                     Testing
                                     <img src="src/assets/img/Next.png" alt="" />
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button type="button" class="vacancy__button">
+                                <a href="" class="vacancy__button">
                                     Launch
                                     <img src="src/assets/img/Next.png" alt="" />
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button type="button" class="vacancy__button">
+                                <a href="" class="vacancy__button">
                                     IT consulting
                                     <img src="src/assets/img/Next.png" alt="" />
-                                </button>
+                                </a>
                             </li>
                         </ul>
                     </div>
