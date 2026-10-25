@@ -27,8 +27,25 @@ img {
 }
 
 h1 {
-    line-height: 45px;
-    letter-spacing: 1px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.33px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    font-weight: 600;
+}
+
+p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
 }
 
 /*Начало хедера*/
@@ -115,13 +132,22 @@ form button:active {
 /*Начало главной страницы*/
 
 .leave-contact {
-    background: #EEEEEE;
-    padding: 10% 5%;
+    background: #f2f4f7;
+    padding-left: 7%;
+    padding-top: 10%;
     height: 900px;
 }
 
+.leave-contact__main-block {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .leave-contact__info {
-    margin: 0 53% 5% 0px;
+    width: 75%;
 }
 
 .leave-contact__info p {
@@ -131,14 +157,13 @@ form button:active {
 
 .leave-contact__form {
     background: #FFFFFF;
-    width: 60%;
     min-width: 382px;
-    margin: 0 0 5% 0px;
     padding: 1% 2% 2% max(3%, 30px);
     border-radius: 10px 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     
 }
+
 .leave-contact form {
     display: flex;
     justify-content: space-between;
@@ -170,12 +195,87 @@ form button:active {
 
 /*Начало второй страницы*/
 .vacancy {
+    padding-left: 7%;
+    padding-top: 4%;
+    padding-bottom: 5%;
+}
+
+.vacancy__main-block {
     display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 80%;
+    column-gap: 100px;
 }
 
 .vacancy__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 600px;
 }
 
+.vacancy__about {
+}
+
+.vacancy__stacks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.vacancy__stack ul{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.vacancy__stack li + li::before {
+    content: "/";
+    color: #0094ff;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+.vacancy__stack li {
+    color:#344054;
+}
+
+
+.vacancy__list {
+}
+
+.vacancy__list ul {
+    display: flex;
+    
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    flex-direction: column;
+    list-style: none;
+}
+
+.vacancy__button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+    .vacancy__button:hover {
+        text-decoration: underline;
+        text-underline-offset: 7px;
+        text-decoration-color: #0094ff;
+        font-weight: 600;
+    }
+
+    .vacancy__button:active {
+        color: #808080;
+    }
 
 /*Конец второй страницы*/
 /*Начало футера*/

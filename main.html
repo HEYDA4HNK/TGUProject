@@ -42,13 +42,14 @@
     <main class="main-data">
         <div class="main-content">
             <div class="leave-contact">
-                <section class="leave-contact__info">
-                    <h1>Development of <span class="h1-blue">mobile applications</span> and <span class="h1-blue">web services</span> of any complexity</h1>
-                    <p>We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices</p>
-                </section>
-                <section class="leave-contact__form">
-                    <h2 class="about-form">Leave your contacts and wi will call you back within 30 minutes</h2>
-                    <form>
+                <div class="leave-contact__main-block">
+                    <section class="leave-contact__info">
+                        <h1>Development of <span class="h1-blue">mobile applications</span> and <span class="h1-blue">web services</span> of any complexity</h1>
+                        <p>We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices</p>
+                    </section>
+                    <section class="leave-contact__form">
+                        <h2 class="about-form">Leave your contacts and wi will call you back within 30 minutes</h2>
+                        <form>
                             <div class="label-block">
                                 <label for="leave-contact__phone-number">Phone number</label>
                                 <input id="leave-contact__phone-number" type="tel" />
@@ -58,100 +59,106 @@
                                 <input id="leave-contact__full-name" type="text" />
                             </div>
 
-                        <button type="submit">Get<br>consultation</button>
-                    </form>
-                </section>
-                
+                            <button type="submit">Get<br>consultation</button>
+                        </form>
+                    </section>
+                </div>
             </div>
             <hr />
             <div class="vacancy">
-                <div class="vacancy__info">
-                    <section class="vacancy__about">
-                        <h1>Full development cycle</h1>
-                        <p>We use proven technologies</p>
-                    </section>
-                    <section class="vacancy__stack">
-                        <h2>Web</h2>
-                        <ul class="vacancy__stack-list">
-                            <li class="vacancy__stack-element">PHP</li>
-                            <li class="vacancy__stack-element">Javascript</li>
-                            <li class="vacancy__stack-element">Node.JS</li>
-                            <li class="vacancy__stack-element">Web Socket</li>
-                            <li class="vacancy__stack-element">Socket.io</li>
-                            <li class="vacancy__stack-element">Vue.js</li>
-                            <li class="vacancy__stack-element">Nuxt</li>
-                            <li class="vacancy__stack-element">MySQL</li>
-                            <li class="vacancy__stack-element">Laravel</li>
-                            <li class="vacancy__stack-element">GO lang</li>
-                            <li class="vacancy__stack-element">django</li>
-                            <li class="vacancy__stack-element">Python</li>
-                        </ul>
-                    </section>
-                    <section class="vacancy__stack">
-                        <h2>Mobile</h2>
-                        <ul class="vacancy__stack-list">
-                            <li class="vacancy__stack-element">Swift</li>
-                            <li class="vacancy__stack-element">Kotlin</li>
-                            <li class="vacancy__stack-element">Alamofire</li>
-                            <li class="vacancy__stack-element">Firebase</li>
-                            <li class="vacancy__stack-element">CoreData</li>
-                            <li class="vacancy__stack-element">Room</li>
-                            <li class="vacancy__stack-element">Realm</li>
-                            <li class="vacancy__stack-element">Coroutine</li>
-                            <li class="vacancy__stack-element">RxJava</li>
-                            <li class="vacancy__stack-element">RxSwift</li>
-                            <li class="vacancy__stack-element">Unit Test</li>
-                            <li class="vacancy__stack-element">Navigation</li>
-                        </ul>
-                    </section>
-                </div>
+                <div class="vacancy__main-block">
+                    <div class="vacancy__info">
+                        <section class="vacancy__about">
+                            <h1>Full development cycle</h1>
+                            <p>We use proven technologies</p>
+                        </section>
+                        <div class="vacancy__stacks">
+                            <section class="vacancy__stack">
+                                <h2>Web</h2>
+                                <ul class="vacancy__stack-list">
+                                    <li class="vacancy__stack-element">PHP</li>
+                                    <li class="vacancy__stack-element">Javascript</li>
+                                    <li class="vacancy__stack-element">Node.JS</li>
+                                    <li class="vacancy__stack-element">Web Socket</li>
+                                    <li class="vacancy__stack-element">Socket.io</li>
+                                    <li class="vacancy__stack-element">Vue.js</li>
+                                    <li class="vacancy__stack-element">Nuxt</li>
+                                    <li class="vacancy__stack-element">MySQL</li>
+                                    <li class="vacancy__stack-element">Laravel</li>
+                                    <li class="vacancy__stack-element">GO lang</li>
+                                    <li class="vacancy__stack-element">django</li>
+                                    <li class="vacancy__stack-element">Python</li>
+                                </ul>
+                            </section>
+                            <section class="vacancy__stack">
+                                <h2>Mobile</h2>
+                                <ul class="vacancy__stack-list">
+                                    <li class="vacancy__stack-element">Swift</li>
+                                    <li class="vacancy__stack-element">Kotlin</li>
+                                    <li class="vacancy__stack-element">Alamofire</li>
+                                    <li class="vacancy__stack-element">Firebase</li>
+                                    <li class="vacancy__stack-element">CoreData</li>
+                                    <li class="vacancy__stack-element">Room</li>
+                                    <li class="vacancy__stack-element">Realm</li>
+                                    <li class="vacancy__stack-element">Coroutine</li>
+                                    <li class="vacancy__stack-element">RxJava</li>
+                                    <li class="vacancy__stack-element">RxSwift</li>
+                                    <li class="vacancy__stack-element">Unit Test</li>
+                                    <li class="vacancy__stack-element">Navigation</li>
+                                </ul>
+                            </section>
+                        </div>
+                        
+                    </div>
 
-                <div class="vacancy__list">
-                    <ul>
-                        <li>
-                            <button type="button" class="vacancy__button">
-                                iOS development
-                                <img src="src/assets/img/Next.png" alt="" />
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="vacancy__button">
-                                Android development
-                                <img src="src/assets/img/Next.png" alt="" />
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="vacancy__button">
-                                Web development
-                                <img src="src/assets/img/Next.png" alt="" />
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="vacancy__button">
-                                UI/UX design
-                                <img src="src/assets/img/Next.png" alt="" />
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="vacancy__button">
-                                Testing
-                                <img src="src/assets/img/Next.png" alt="" />
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="vacancy__button">
-                                Launch
-                                <img src="src/assets/img/Next.png" alt="" />
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="vacancy__button">
-                                IT consulting
-                                <img src="src/assets/img/Next.png" alt="" />
-                            </button>
-                        </li>
-                    </ul>
+                    <div class="vacancy__list">
+                        <ul>
+                            <li>
+                                <button type="button" class="vacancy__button">
+                                    iOS development
+                                    <img src="src/assets/img/Next.png" alt="" />
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="vacancy__button">
+                                    Android development
+                                    <img src="src/assets/img/Next.png" alt="" />
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="vacancy__button">
+                                    Web development
+                                    <img src="src/assets/img/Next.png" alt="" />
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="vacancy__button">
+                                    UI/UX design
+                                    <img src="src/assets/img/Next.png" alt="" />
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="vacancy__button">
+                                    Testing
+                                    <img src="src/assets/img/Next.png" alt="" />
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="vacancy__button">
+                                    Launch
+                                    <img src="src/assets/img/Next.png" alt="" />
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="vacancy__button">
+                                    IT consulting
+                                    <img src="src/assets/img/Next.png" alt="" />
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                
             </div>
             <hr />
             <section class="projects-industries">
