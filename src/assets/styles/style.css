@@ -1,4 +1,4 @@
-@import "./global.css";
+п»ї@import "./global.css";
 @import "./fonts.css";
 @import "./utils.css";
 
@@ -56,7 +56,7 @@ p {
     letter-spacing: -0.24px;
 }
 
-/*Начало хедера*/
+/*РќР°С‡Р°Р»Рѕ С…РµРґРµСЂР°*/
 .main-header {
     position: fixed;
     top: 1vh;
@@ -77,7 +77,7 @@ p {
 .menu-button {
     height: 40px;
     width: 59px;
-    background: url(../img/Menu.png);
+    background: url(../img/Group625890.png);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -120,7 +120,7 @@ p {
         text-decoration: none;
         color: #2d66ee;
     }
-/*Конец хедера*/
+/*РљРѕРЅРµС† С…РµРґРµСЂР°*/
 .h1-blue {
     color: #2d66ee;
 }
@@ -152,7 +152,7 @@ form button {
 form button:active {
     background: #0071c2;
 }
-/*Начало главной страницы*/
+/*РќР°С‡Р°Р»Рѕ РіР»Р°РІРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹*/
 
 .leave-contact {
     background: #f2f4f7;
@@ -216,9 +216,9 @@ form button:active {
     font-size: 12px;
     display: block;
 }
-/*Конец главной страницы*/
+/*РљРѕРЅРµС† РіР»Р°РІРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹*/
 
-/*Начало второй страницы*/
+/*РќР°С‡Р°Р»Рѕ РІС‚РѕСЂРѕР№ СЃС‚СЂР°РЅРёС†С‹*/
 .vacancy {
     padding-left: 7%;
     padding-top: 4%;
@@ -316,10 +316,10 @@ form button:active {
         color: #808080;
     }
 
-/*Конец второй страницы*/
+/*РљРѕРЅРµС† РІС‚РѕСЂРѕР№ СЃС‚СЂР°РЅРёС†С‹*/
 
 
-/*Начало футера*/
+/*РќР°С‡Р°Р»Рѕ С„СѓС‚РµСЂР°*/
 .main-footer {
     display: flex;
     place-items: center;
@@ -364,7 +364,7 @@ form button:active {
     gap: 10px;
     color: #ffffff;
 }
-/*Конец футера*/
+/*РљРѕРЅРµС† С„СѓС‚РµСЂР°*/
 
 [data-show-medium] {
     display: none;
@@ -454,6 +454,10 @@ form button:active {
 
     [data-hidden-thin] {
         display: none;
+    }
+    .menu-button {
+        height: 20px;
+        width: 40px;
     }
     .leave-contact {
         padding-right: 7%;
