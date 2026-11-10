@@ -75,7 +75,7 @@ p {
 .menu-button {
   height: 40px;
   width: 59px;
-  background: url(../img/Menu.png);
+  background: url(../img/Group625890.png);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -484,6 +484,10 @@ form button:active {
   }
   [data-hidden-thin] {
     display: none;
+  }
+  .menu-button {
+    width: 40px;
+    height: 20px;
   }
   .leave-contact {
     padding-top: 20%;
