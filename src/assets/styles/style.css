@@ -60,6 +60,7 @@ p {
 .main-header {
     position: fixed;
     top: 1vh;
+    height: 56px;
     left: max(7%, calc((100% - 1240px) / 2));
     width: min(93%, 1124px);
     align-self: flex-start;
