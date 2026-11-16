@@ -506,13 +506,27 @@ form button:active {
         width: 40px;
     }
     .leave-contact {
+        padding-top: 20%;
         padding-right: 7%;
         height: 1267px;
     }
+
     .leave-contact__main-block {
         width: 100%;
         flex-direction: column;
         align-items: center;
+    }
+
+    .contact__animation {
+        transform: translate(0, 0) rotate(-10deg) scale(0.5, 0.5);
+    }
+
+    .animation-top {
+        animation: none;
+    }
+
+    .animation-bottom {
+        animation: none;
     }
 
     .vacancy__main-block {
