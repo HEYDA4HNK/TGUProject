@@ -502,7 +502,7 @@ form button:active {
     align-items: center;
   }
   .contact__animation {
-    transform: translate(20%, 25%) rotate(-10deg);
+    transform: translate(0, 0) rotate(-10deg) scale(0.5, 0.5);
   }
   .animation-top {
     animation: none;
