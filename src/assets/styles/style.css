@@ -154,12 +154,25 @@ form button:active {
     background: #0071c2;
 }
 /*Начало главной страницы*/
-
 .leave-contact {
     background: #f2f4f7;
     padding-left: 7%;
     padding-top: clamp(10%, 10vh, 20%);
     height: 900px;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+}
+
+.contact__animation {
+    display: flex;
+    grid-column: 2;
+    min-width: 0;
+    max-width: 100%;
+    transform: translate(min(70vw, 65%), 0) rotate(-10deg);
+    inset: 0;
+    z-index: 0;
+    position: absolute;
 }
 
 .leave-contact__main-block {
@@ -168,15 +181,46 @@ form button:active {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    grid-column: 1;
+    z-index: 1;
+    position: relative;
+}
+
+.animation-top {
+    animation: slide-top 5s linear infinite;
+}
+
+.animation-bottom {
+    animation: slide-bottom 5s linear infinite;
+}
+
+@keyframes slide-top {
+    from {
+        transform: translate(0, -500px);
+    }
+
+    to {
+        transform: translate(0, -500px);
+    }
+}
+
+@keyframes slide-bottom {
+    from {
+        transform: translate(0, -500px);
+    }
+
+    to {
+        transform: translate(0, -500px);
+    }
 }
 
 .leave-contact__info {
     width: 75%;
 }
 
-.leave-contact__info p {
-    font-weight: 500;
-}
+    .leave-contact__info p {
+        font-weight: 500;
+    }
 
 .leave-contact__form {
     display: flex;
@@ -189,22 +233,22 @@ form button:active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.leave-contact__form form {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px 20px;
-    align-items: center;
-}
+    .leave-contact__form form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px 20px;
+        align-items: center;
+    }
 
     .leave-contact__form h2 {
         padding: 0 20% 0 0;
-        font-size: clamp(1rem, 2vw, 1.25rem)
+        font-size: clamp(1rem, 2vw, 1.25rem);
     }
 
 .input-labels {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
     display: flex;
     justify-content: flex-start;
     gap: 20px;
@@ -212,7 +256,7 @@ form button:active {
     align-items: center;
 }
 
-.label-block label{
+.label-block label {
     color: #808080;
     font-size: 12px;
     display: block;
