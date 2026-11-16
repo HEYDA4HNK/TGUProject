@@ -11,14 +11,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: #f2f4f7;
     margin: 0;
 }
 
 .main-data {
-    background: #ffffff;
     display: flex;
     justify-content: center;
-
 }
 
 .main-content {
@@ -170,10 +169,11 @@ form button:active {
 
 .contact__animation {
     display: flex;
+    gap: 20px;
     grid-column: 2;
     min-width: 0;
     max-width: 100%;
-    transform: translate(min(70vw, 65%), 0) rotate(-10deg);
+    transform: translate(min(70vw, 60%), 0) rotate(-10deg);
     inset: 0;
     z-index: 0;
     position: absolute;
@@ -191,11 +191,11 @@ form button:active {
 }
 
 .animation-top {
-    animation: slide-top 5s linear infinite;
+    animation: slide-top 20s linear infinite;
 }
 
 .animation-bottom {
-    animation: slide-bottom 5s linear infinite;
+    animation: slide-bottom 20s linear infinite;
 }
 
 @keyframes slide-top {
@@ -272,6 +272,7 @@ form button:active {
     padding-left: $base-offset;
     padding-top: 4%;
     padding-bottom: 5%;
+    background-color: #FFFFFF;
 }
 
 .vacancy__main-block {
