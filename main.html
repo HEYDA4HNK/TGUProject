@@ -335,34 +335,39 @@
                     </div>
 
                 </div>
-                <hr />
                 <div class="discuss">
-                    <section class="discuss__info">
-                        <h1>
-                            Let's discuss<br />
-                            Your project
-                        </h1>
-                        <p>
-                            Let's figure out how to create an effective application,<br />
-                            its cost and terms of its development
-                        </p>
-                    </section>
-                    <form class="discuss__form">
-                        <label for="discuss__phone-number">Best phone number</label>
-                        <input id="discuss__phone-number" type="tel" />
-                        <label for="discuss__full-name">Full name</label>
-                        <input id="discuss__full-name" type="text" />
-                        <button type="submit">Discuss the project</button>
-                    </form>
+                    <div class="discuss__main">
+                        <section class="discuss__info">
+                            <h1>
+                                Let's discuss<br />
+                                Your project
+                            </h1>
+                            <p>
+                                Let's figure out how to create an effective application,<br />
+                                its cost and terms of its development
+                            </p>
+                        </section>
+                        <form class="discuss__form">
+                            <div class="discuss__input-with-label">
+                                <label for="discuss__phone-number">Best phone number</label>
+                                <input id="discuss__phone-number" type="tel" />
+                            </div>
+                            <div class="discuss__input-with-label">
+                                <label for="discuss__full-name">Full name</label>
+                                <input id="discuss__full-name" type="text" />
+                            </div>
+                            <button type="submit">Discuss the project</button>
+                        </form>
+                    </div>
+                    
                 </div>
-                <hr />
                 <section class="development-stages">
                     <h1>Application Development Stages</h1>
-                    <div>
+                    <div class="development-stages__lists">
                         <ul class="development-stages__list">
                             <li class="development-stages__element">
                                 <h3>
-                                    <img src="src/assets/img/Analysis.png" alt="" height=40 width=40 />
+                                    <img src="src/assets/img/StagesIcons/planing.png" alt="" height="48" width="48" />
                                     Analysis
                                 </h3>
                                 <p>
@@ -371,7 +376,7 @@
                             </li>
                             <li class="development-stages__element">
                                 <h3>
-                                    <img src="src/assets/img/Design.png" alt="" height=40 width=40 />
+                                    <img src="src/assets/img/StagesIcons/graphic-design.png" alt="" height="48" width="48" />
                                     Design
                                 </h3>
                                 <p>
@@ -380,16 +385,19 @@
                             </li>
                             <li class="development-stages__element">
                                 <h3>
-                                    <img src="src/assets/img/Development.png" alt="" height=40 width=40 />
+                                    <img src="src/assets/img/StagesIcons/coding-language.png" alt="" height="48" width="48" />
                                     Development
                                 </h3>
                                 <p>
                                     We create an extensible architecture, write clean and stable code. We integrate with customer technologies.
                                 </p>
                             </li>
+                        </ul>
+
+                        <ul class="development-stages__list">
                             <li class="development-stages__element">
                                 <h3>
-                                    <img src="src/assets/img/Testing.png" alt="" height=40 width=40 />
+                                    <img src="src/assets/img/StagesIcons/security.png" alt="" height="48" width="48" />
                                     Testing
                                 </h3>
                                 <p>
@@ -398,7 +406,7 @@
                             </li>
                             <li class="development-stages__element">
                                 <h3>
-                                    <img src="src/assets/img/Launching.png" alt="" height=40 width=40 />
+                                    <img src="src/assets/img/StagesIcons/hosting 1.png" alt="" height="48" width="48" />
                                     Launching
                                 </h3>
                                 <p>
@@ -407,7 +415,7 @@
                             </li>
                             <li class="development-stages__element">
                                 <h3>
-                                    <img src="src/assets/img/Support.png" alt="" height=40 width=40 />
+                                    <img src="src/assets/img/StagesIcons/application.png" alt="" height="48" width="48" />
                                     Support
                                 </h3>
                                 <p>
@@ -415,6 +423,7 @@
                                 </p>
                             </li>
                         </ul>
+
                     </div>
                 </section>
                 <hr />
