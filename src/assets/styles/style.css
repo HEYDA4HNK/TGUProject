@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "./global.css";
 @import "./fonts.css";
 @import "./utils.css";
@@ -616,6 +617,168 @@ form button:active {
 }
 
 /* End Sixth Page*/
+/* Start Seven Page*/
+.our-team {
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 7%;
+  padding-bottom: 5%;
+}
+
+.our-team__main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+.our-team__metrics {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.our-team__concrete-metric h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 144%;
+  letter-spacing: 0.33px;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.our-team__concrete-metric p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #667085;
+  white-space: nowrap;
+}
+
+.our-team__info {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.our-team__next-info {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.our-team__video {
+  grid-column: 2;
+  grid-row: 1/span 2;
+  background-image: url("../img/Frame 625882.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* End Seven Page*/
+/* Start Eight Page */
+.get-books {
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 7%;
+  padding-bottom: 5%;
+  background: #2b62ed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 40px;
+}
+
+.get-books__image {
+  background-image: url("../img/книга-2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: scale(1.4, 1.4);
+  grid-row: 1/span 2;
+}
+
+.get-books__section {
+  color: white;
+}
+
+.get-books__form {
+  gap: 20px;
+  grid-row: 2;
+  grid-column: 1;
+  background: #ffffff;
+  border-radius: 16px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+  padding: 5%;
+  width: 600px;
+}
+
+.get-books__form input {
+  width: 100%;
+}
+
+#get-books__email-field {
+  grid-row: 2;
+  grid-column: 1/span 2;
+}
+
+#get-books__email-field input {
+  width: 100%;
+}
+
+.get-books__form button {
+  grid-row: 3;
+  grid-column: 2;
+  text-align: center;
+  justify-self: flex-end;
+  padding: 0;
+  width: 225px;
+  height: 40px;
+}
+
+/* End Eight Page*/
+/* FINAL PAGE OMG 7:25 */
+.faq {
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 7%;
+  padding-bottom: 5%;
+  background-color: white;
+}
+
+.faq__lists {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.faq__list {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.faq__element:first-child {
+  border-top: 1px solid #D0D5DD;
+}
+
+.faq__element {
+  border-bottom: 1px solid #D0D5DD;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.faq__element button {
+  border: none;
+  background: none;
+  align-self: self-start;
+}
+
+/* END FINAL PAGE */
 /* Start Footer */
 .main-footer {
   display: flex;
@@ -789,6 +952,74 @@ form button:active {
   .development-stages__element {
     width: 100%;
   }
+  .our-team__main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 413px auto;
+  }
+  .our-team__info {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .our-team__next-info {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .our-team__video {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .get-books {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 40px;
+  }
+  .get-books__image {
+    background-image: url("../img/книга-2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: scale(1.2, 1.2);
+    grid-row: 2;
+  }
+  .get-books__section {
+    color: white;
+    grid-column: 1/span 2;
+    width: 70%;
+  }
+  .get-books__form {
+    gap: 40px;
+    grid-row: 2;
+    grid-column: 1;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding: 6%;
+    padding-top: 10%;
+    padding-bottom: 7%;
+    width: 335px;
+  }
+  .get-books__form input {
+    width: 100%;
+  }
+  #get-books__email-field {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  #get-books__email-field input {
+    width: 100%;
+  }
+  .get-books__form button {
+    grid-row: auto;
+    grid-column: auto;
+    justify-self: flex-start;
+  }
+  .faq__lists {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #faq__list-first {
+    border-top: 0;
+  }
 }
 /* 425 media*/
 @media (max-width: 685px) {
@@ -885,6 +1116,52 @@ form button:active {
   }
   .discuss__form button {
     width: 255px;
+  }
+  .our-team__concrete-metric h3 {
+    font-size: 28px;
+  }
+  .get-books {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 240px 1fr;
+    gap: 40px;
+  }
+  .get-books__image {
+    background-image: url("../img/книга-2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: scale(1.2, 1.2);
+    grid-row: 2;
+  }
+  .get-books__section {
+    grid-column: 1;
+    width: 100%;
+  }
+  .get-books__form {
+    gap: 40px;
+    grid-row: 3;
+    grid-column: 1;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding: 6%;
+    padding-top: 10%;
+    padding-bottom: 7%;
+    width: 100%;
+  }
+  .get-books__form input {
+    width: 100%;
+  }
+  #get-books__email-field {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  #get-books__email-field input {
+    width: 100%;
+  }
+  .get-books__form button {
+    grid-row: auto;
+    grid-column: auto;
+    justify-self: flex-start;
   }
 }
 
