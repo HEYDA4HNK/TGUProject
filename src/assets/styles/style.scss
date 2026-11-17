@@ -50,6 +50,15 @@ body {
     isolation: isolate;
 }
 
+.color-content__blue {
+    position: relative;
+    background-color: #2b62ed;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
 .color-content {
     position: relative;
     display: flex;
@@ -562,7 +571,6 @@ form button:active {
     padding-right: $base-offset;
     padding-top: 5%;
     padding-bottom: 5%;
-    background: #2D66EE;
 }
 
 .discuss__main {
@@ -713,7 +721,6 @@ form button:active {
     padding-right: $base-offset;
     padding-top: 7%;
     padding-bottom: 5%;
-    background: #2b62ed;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
