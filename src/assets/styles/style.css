@@ -8,17 +8,33 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #f2f4f7;
   margin: 0;
 }
 
-.main-data {
+.scaled-content {
+  width: min(100%, 1440px);
+}
+
+.color-content__white {
+  position: relative;
+  background-color: white;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.color-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #f2f4f7;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .main-content {
-  width: min(100%, 1440px);
+  width: 100%;
 }
 
 img {
@@ -168,9 +184,6 @@ form button:active {
   padding-left: 7%;
   padding-top: clamp(10%, 10vh, 20%);
   height: 900px;
-  overflow: hidden;
-  position: relative;
-  isolation: isolate;
 }
 
 .contact__animation {
