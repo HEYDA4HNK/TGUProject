@@ -1224,10 +1224,6 @@ form button:active {
     }
 
     .get-books__image {
-        background-image: url("../img/книга-2.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
         transform: scale(1.2, 1.2);
         grid-row: 2;
     }

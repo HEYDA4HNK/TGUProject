@@ -1,83 +1,147 @@
 ﻿<!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="src/assets/styles/style.css" />
-    <title>Home</title>
 </head>
 
 <body>
-    <header>
-        <section class="main-information">
-            <img src="src/assets/img/Logo.png" alt="Мой логотип" width="200" height="200">
-
-            <nav class="navigation">
-                <ul>
-                    <li>
-                        <a href="index.html">Главная</a>
-                    </li>
-                    <li>
-                        <a href="contacts.html">Контакты</a>
-                    </li>
-                </ul>
-
-            </nav>
-        </section>
-
-        <nav class="breadcrumbs">
-            <a href="index.html">Главная</a>
-        </nav>
-    </header>
 
     <main>
-        <section class="introduction">
-            <h1>Что такое случайность?</h1>
-            <p>интересные факты про кубики</p>
-        </section>
-
+        HELLO JAVA SCRIPT
         <hr />
-        <div class="dice">
-            <section class="dice-info">
-                <h3>БРОСАТЬ КОСТИ</h3>
-                <article id="dice-mean">
-                    <h4>Что это означает?</h4>
-                    <p>Это очень страшно, не советую узнавать что это значит</p>
-                </article>
-
-            </section>
-            <figure class="dice-img">
-                <figcaption>Пример кубика</figcaption>
-                <img src="src/assets/img/Dice.png" height=100 width=100 />
-            </figure>
-        </div>
-        
-
-        <hr />
-
-        <div class="chip">
-            <section class="chip-info">
-                <h3>ФИШКИ</h3>
-                <p>Фишка, единственный элемент доски</p>
-            </section>
-            <aside class="chip-image">
-                <img src="src/assets/img/Chip.png" width=200 />
-            </aside>
-        </div>
-        
+        <button type="button" onclick="task1()">Сделать таск 1</button>
+        <button type="button" onclick="task2()">Сделать таск 2</button>
+        <button type="button" onclick="task3()">Сделать таск 3</button>
+        <button type="button" onclick="task4()">Сделать таск 4</button>
+        <button type="button" onclick="task5()">Сделать таск 5</button>
     </main>
 
-    <footer>
-        <section class="footer-information">
-            <h3>Спонсоры</h3>
-            <p>Я и мои хтонические кошмары</p>
-        </section>
+    <script>
+        function task1() {
+            function pickPropArray(students, prop) {
+                let result = []
+                for (let i = 0; i < students.length; i++) {
+                    let student = students[i]
+                    if (prop in student) {
+                        result.push(student[prop])
+                    }
+                }
+                return result
+            }
 
-        <address class="contarct-information">
-            <ul>
-                <li> Александр </li>
-                <li>+79829416649 </li>
-                <li>stud0000310795@utmn.ru </li>
-            </ul>
-        </address>
-        <p id="copyright">Все права защищены</p>
-    </footer>
+            const students = [
+                { name: 'Павел', age: 20 },
+                { name: 'Иван', age: 20 },
+                { name: 'Эдем', age: 20 },
+                { name: 'Денис', age: 20 },
+                { name: 'Виктория', age: 20 },
+                { age: 40 },
+            ]
+            const result = pickPropArray(students, 'name')
+            console.log(result)
+        }
+
+        function task2() {
+            function createCounter() {
+                var counter = 0;
+                return function () {
+                    counter++
+                    console.log(counter)
+                }
+            }
+
+            const counter1 = createCounter()
+            counter1() // 1
+            counter1() // 2
+
+            const counter2 = createCounter()
+            counter2() // 1
+            counter2() // 2
+
+        }
+
+        function task3() {
+            function spinWords(line) {
+                let result = []
+                let words = line.split(' ')
+                for (let i = 0; i < words.length; i++) {
+                    let word = words[i]
+                    if (word.length >= 5) {
+                        word = word.split('').reverse().join('')
+                    }
+                    result.push(word)
+                }
+                return result.join(" ")
+            }
+
+            const result1 = spinWords("Привет от Legacy")
+            console.log(result1) // тевирП от ycageL
+
+            const result2 = spinWords("This is a test")
+            console.log(result2) // This is a test
+        }
+
+        function task4() {
+            function findNums(nums, target) {
+                let rightIndex = nums.length - 1;
+                let leftIndex = 0;
+                while (rightIndex != leftIndex) {
+                    let numsSum = nums[leftIndex] + nums[rightIndex]
+                    if (numsSum === target) {
+                        return [leftIndex, rightIndex];
+                    }
+                    else if (numsSum > target) {
+                        rightIndex--
+                    }
+                    else {
+                        leftIndex++
+                    }
+                }
+            }
+
+            const nums = [2, 7, 11, 15]
+            const target = 9
+
+            const res = findNums(nums, target)
+            console.log(res)
+        }
+
+        function task5() {
+            function findSubstring(strs) {
+                let minStr = ''
+                let minStrLength = Number.MAX_VALUE
+                for (let i = 0; i < strs.length; i++) {
+                    let string = strs[i]
+                    let strLen = string.length
+                    if (minStrLength > strLen) {
+                        minStr = string
+                        minStrLength = strLen
+                    }
+                }
+
+                let resultSubstring = ""
+                let resultSubstringLenght = 0
+
+                for (let i = 0; i < minStrLength - 1; i++) {
+                    for (let k = i + 2; k < minStrLength+1; k++) {
+                        let substring = minStr.slice(i, k)
+                        let substringLen = k - i
+                        if (resultSubstringLenght < substringLen && strs.every(s => s.includes(substring))) {
+                            resultSubstring = substring
+                            resultSubstringLenght = resultSubstringLenght
+                        }
+                    }
+                }
+                return resultSubstring
+            }
+
+            const strs1 = ["цветок", "поток", "хлопок"]
+            const res1 = findSubstring(strs1)
+            console.log(res1)
+
+            strs2 = ["собака", "гоночная машина", "машина"]
+            const res2 = findSubstring(strs2)
+            console.log(res2)
+        }
+
+    </script>
 </body>
