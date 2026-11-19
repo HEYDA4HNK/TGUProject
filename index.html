@@ -82,18 +82,13 @@
 
         function task4() {
             function findNums(nums, target) {
-                let rightIndex = nums.length - 1;
-                let leftIndex = 0;
-                while (rightIndex != leftIndex) {
-                    let numsSum = nums[leftIndex] + nums[rightIndex]
-                    if (numsSum === target) {
-                        return [leftIndex, rightIndex];
-                    }
-                    else if (numsSum > target) {
-                        rightIndex--
+                let dict = new Map();
+                for (let i = 0; i < nums.length; i++) {
+                    if (dict.has(nums[i])) {
+                        return [dict.get(nums[i]), i]
                     }
                     else {
-                        leftIndex++
+                        dict.set(target - nums[i], i)
                     }
                 }
             }
@@ -121,13 +116,17 @@
                 let resultSubstring = ""
                 let resultSubstringLenght = 0
 
-                for (let i = 0; i < minStrLength - 1; i++) {
-                    for (let k = i + 2; k < minStrLength+1; k++) {
+                for (let i = 0; i < minStrLength-1; i++) {
+                    for (let k = i + 2; k <= minStrLength; k++) {
                         let substring = minStr.slice(i, k)
                         let substringLen = k - i
-                        if (resultSubstringLenght < substringLen && strs.every(s => s.includes(substring))) {
+                        let isSubstring = strs.every(s => s.includes(substring));
+                        if (resultSubstringLenght < substringLen && isSubstring) {
                             resultSubstring = substring
-                            resultSubstringLenght = resultSubstringLenght
+                            resultSubstringLenght = substringLen
+                        }
+                        else if(!isSubstring) {
+                            break;
                         }
                     }
                 }
@@ -138,9 +137,13 @@
             const res1 = findSubstring(strs1)
             console.log(res1)
 
-            strs2 = ["собака", "гоночная машина", "машина"]
+            const strs2 = ["собака", "гоночная машина", "машина"]
             const res2 = findSubstring(strs2)
             console.log(res2)
+
+            const strs3 = ["пузико", "мыльные пузыри", "карапузы"]
+            const res3 = findSubstring(strs3)
+            console.log(res3)
         }
 
     </script>
