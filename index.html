@@ -5,146 +5,39 @@
 
 <body>
 
-    <main>
-        HELLO JAVA SCRIPT
-        <hr />
-        <button type="button" onclick="task1()">Сделать таск 1</button>
-        <button type="button" onclick="task2()">Сделать таск 2</button>
-        <button type="button" onclick="task3()">Сделать таск 3</button>
-        <button type="button" onclick="task4()">Сделать таск 4</button>
-        <button type="button" onclick="task5()">Сделать таск 5</button>
+    <main id="mainInfo">
+
     </main>
 
-    <script>
-        function task1() {
-            function pickPropArray(students, prop) {
-                let result = []
-                for (let i = 0; i < students.length; i++) {
-                    let student = students[i]
-                    if (prop in student) {
-                        result.push(student[prop])
-                    }
-                }
-                return result
-            }
-
-            const students = [
-                { name: 'Павел', age: 20 },
-                { name: 'Иван', age: 20 },
-                { name: 'Эдем', age: 20 },
-                { name: 'Денис', age: 20 },
-                { name: 'Виктория', age: 20 },
-                { age: 40 },
-            ]
-            const result = pickPropArray(students, 'name')
-            console.log(result)
-        }
-
-        function task2() {
-            function createCounter() {
-                var counter = 0;
-                return function () {
-                    counter++
-                    console.log(counter)
-                }
-            }
-
-            const counter1 = createCounter()
-            counter1() // 1
-            counter1() // 2
-
-            const counter2 = createCounter()
-            counter2() // 1
-            counter2() // 2
-
-        }
-
-        function task3() {
-            function spinWords(line) {
-                let result = []
-                let words = line.split(' ')
-                for (let i = 0; i < words.length; i++) {
-                    let word = words[i]
-                    if (word.length >= 5) {
-                        word = word.split('').reverse().join('')
-                    }
-                    result.push(word)
-                }
-                return result.join(" ")
-            }
-
-            const result1 = spinWords("Привет от Legacy")
-            console.log(result1) // тевирП от ycageL
-
-            const result2 = spinWords("This is a test")
-            console.log(result2) // This is a test
-        }
-
-        function task4() {
-            function findNums(nums, target) {
-                let dict = new Map();
-                for (let i = 0; i < nums.length; i++) {
-                    if (dict.has(nums[i])) {
-                        return [dict.get(nums[i]), i]
-                    }
-                    else {
-                        dict.set(target - nums[i], i)
-                    }
-                }
-            }
-
-            const nums = [2, 7, 11, 15]
-            const target = 9
-
-            const res = findNums(nums, target)
-            console.log(res)
-        }
-
-        function task5() {
-            function findSubstring(strs) {
-                let minStr = ''
-                let minStrLength = Number.MAX_VALUE
-                for (let i = 0; i < strs.length; i++) {
-                    let string = strs[i]
-                    let strLen = string.length
-                    if (minStrLength > strLen) {
-                        minStr = string
-                        minStrLength = strLen
-                    }
-                }
-
-                let resultSubstring = ""
-                let resultSubstringLenght = 0
-
-                for (let i = 0; i < minStrLength-1; i++) {
-                    for (let k = i + 2; k <= minStrLength; k++) {
-                        let substring = minStr.slice(i, k)
-                        let substringLen = k - i
-                        let isSubstring = strs.every(s => s.includes(substring));
-                        if (resultSubstringLenght < substringLen && isSubstring) {
-                            resultSubstring = substring
-                            resultSubstringLenght = substringLen
-                        }
-                        else if(!isSubstring) {
-                            break;
-                        }
-                    }
-                }
-                return resultSubstring
-            }
-
-            const strs1 = ["цветок", "поток", "хлопок"]
-            const res1 = findSubstring(strs1)
-            console.log(res1)
-
-            const strs2 = ["собака", "гоночная машина", "машина"]
-            const res2 = findSubstring(strs2)
-            console.log(res2)
-
-            const strs3 = ["пузико", "мыльные пузыри", "карапузы"]
-            const res3 = findSubstring(strs3)
-            console.log(res3)
-        }
-
-    </script>
+    
 </body>
+<script>
+    function constructPage(jsonData) {
+        function constructBlock(object, iteration) {
+            let data = []
+            let tabSymbols = "  "
+            let allTabs = tabSymbols.repeat(iteration)
+            let allTabsAddOne = tabSymbols.repeat(iteration + 1)
+            if ("name" in object) {
+                data.push(`${allTabsAddOne}<span>${object["name"]}</span>`)
+            }
+
+
+            if ("childs" in object) {
+                let childs = []
+                for (let child of object["childs"]) {
+                    let block = constructBlock(child, iteration + 2)
+                    childs.push(block)
+                }
+                data.push(`${allTabsAddOne}<div class='dataChilds'>\n${childs.join('')}</div>`)
+            }
+            let resStr = data.join('\n')
+            return `${allTabs}<div class='dataClass'>\n${resStr}\n${allTabs}</div>`
+        }
+        document.body.innerHTML = constructBlock(jsonData, 0);
+    }
+    fetch('src/data/menuTree.json')
+        .then(response => response.json())
+        .then(constructPage);
+
+</script>

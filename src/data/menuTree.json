@@ -1,0 +1,57 @@
+﻿{
+  "name": "Каталог товаров",
+  "childs": [
+    {
+      "name": "Мойки",
+      "childs": [
+        {
+          "name": "Ulgran",
+          "childs": [
+            {
+              "name": "Smth"
+            },
+            {
+              "name": "Smth"
+            }
+          ]
+        },
+        {
+          "name": "Vigro Mramor"
+        },
+        {
+          "name": "Handmade",
+          "childs": [
+            {
+              "name": "Smth"
+            },
+            {
+              "name": "Smth"
+            }
+          ]
+        },
+        {
+          "name": "Vigro Glass"
+        }
+      ]
+    },
+    {
+      "name": "Фильтры",
+      "childs": [
+        {
+          "name": "Ulgran",
+          "childs": [
+            {
+              "name": "Smth"
+            },
+            {
+              "name": "Smth"
+            }
+          ]
+        },
+        {
+          "name": "Vigro Mramor"
+        }
+      ]
+    }
+  ]
+}
