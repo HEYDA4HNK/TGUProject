@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "Каталог товаров",
   "childs": [
     {
@@ -7,6 +7,12 @@
         {
           "name": "Ulgran",
           "childs": [
+            {
+              "name": "Smth"
+            },
+            {
+              "name": "Smth"
+            },
             {
               "name": "Smth"
             },

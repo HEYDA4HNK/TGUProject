@@ -1,7 +1,11 @@
-﻿<!DOCTYPE html>
+
+<!DOCTYPE html>
 
 <head>
+    <link rel="stylesheet" href="src/assets/styles/style.css" />
+    <title>Tree</title>
 </head>
+
 
 <body>
 
@@ -9,32 +13,59 @@
 
     </main>
 
-    
+
 </body>
 <script>
+    
+
     function constructPage(jsonData) {
-        function constructBlock(object, iteration) {
-            let data = []
-            let tabSymbols = "  "
-            let allTabs = tabSymbols.repeat(iteration)
-            let allTabsAddOne = tabSymbols.repeat(iteration + 1)
-            if ("name" in object) {
-                data.push(`${allTabsAddOne}<span>${object["name"]}</span>`)
-            }
-
-
-            if ("childs" in object) {
-                let childs = []
-                for (let child of object["childs"]) {
-                    let block = constructBlock(child, iteration + 2)
-                    childs.push(block)
-                }
-                data.push(`${allTabsAddOne}<div class='dataChilds'>\n${childs.join('')}</div>`)
-            }
-            let resStr = data.join('\n')
-            return `${allTabs}<div class='dataClass'>\n${resStr}\n${allTabs}</div>`
+        const createButton = (className, parent) => {
+            const btn = document.createElement('button');
+            btn.className = className;
+            parent.appendChild(btn);
+            return btn;
         }
-        document.body.innerHTML = constructBlock(jsonData, 0);
+        function constructBlock(object) {
+            
+
+            const infoBlock = document.createElement("div");
+            const arrow = createButton("arrowButton", infoBlock);
+            const folder = createButton("folderButton", infoBlock);
+            
+            const baseBlock = document.createElement("div");
+            baseBlock.appendChild(infoBlock);
+            baseBlock.className = "dataClass";
+            infoBlock.className = "infoData";
+            if ("childs" in object) {
+                const childBlock = document.createElement('div');
+                childBlock.className = 'dataChilds';
+                baseBlock.appendChild(childBlock);
+                for (let child of object["childs"]) {
+                    childBlock.appendChild(constructBlock(child));
+                }
+                arrow.setAttribute("data-is-open", "close");
+                childBlock.setAttribute("data-is-open", "close");
+            }
+            if ("name" in object) {
+                const span = document.createElement("span")
+                span.appendChild(document.createTextNode(object["name"]))
+                infoBlock.append(span)
+            }
+            return baseBlock
+        }
+        const main = document.getElementById("mainInfo");
+        main.appendChild(constructBlock(jsonData));
+        main.addEventListener("click", (e) => {
+            if (e.target.className == "arrowButton") {
+                const currentArrow = e.target.getAttribute("data-is-open");
+                if (!currentArrow)
+                    return;
+                const isOpen = currentArrow == "open";
+                e.target.setAttribute("data-is-open", isOpen ? "close" : "open");
+                const childs = e.target.closest(".dataClass").querySelector(".dataChilds");
+                childs && childs.setAttribute("data-is-open", isOpen ? "close" : "open");
+            }
+        })
     }
     fetch('src/data/menuTree.json')
         .then(response => response.json())
