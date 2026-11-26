@@ -33,7 +33,6 @@ export const snake = {
     },
     setBodyLength() {
         this.bodyLenght = this.getBody().length - 1;
-        console.log(this.bodyLenght);
     },
     /**
      * Отдает прошлое направление змейки.
