@@ -228,5 +228,7 @@
     "wrappy": "^1.0.2",
     "ws": "^8.23.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "webpack-cli": "^7.3.1"
+  }
 }
